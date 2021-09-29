@@ -1,0 +1,33 @@
+.information{
+    padding-top: 55px;
+    p{
+        font-family: $Regular;
+        font-size:16pt;
+        line-height: 32px;
+    }
+    .p60{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__mb{
+        margin-bottom: 150px;
+    }
+}
+@media (max-width: 1024px) {
+    .information{
+        padding: 30px 15px 0;
+        .contain{
+            padding: 0;
+        }
+        .p60{
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        &__mb{
+            margin-bottom: 150px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    }   
+}

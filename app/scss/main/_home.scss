@@ -1,0 +1,128 @@
+.home{
+    height: 100vh;
+    position: relative;
+    top: 0;
+    h1{
+        position: relative;
+        z-index: 1;
+    }
+    &__top{
+        background-color: $blue;
+        background-image: url('../images/home.png');
+        background-size: cover;
+        min-height: 700px;
+        position: relative;
+        .btn_orange{
+            max-width: 360px;
+            width:100%;
+            height: 80px;
+            border-radius: 106px;
+            font-family: $Bold;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: capitalize;
+            color: $white;
+            margin-top: 70px;
+        }
+    }
+    &__bottom{
+        width: 100%;
+        background: $white;
+        padding: 70px 0;
+        p{
+            font-size: 16pt;
+            line-height: 32px;
+            color: $blue;
+        }
+        .relative{
+            position: relative;
+            img{
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 1700px) {
+    .home{
+        &__bottom{
+            padding: 30px 0;
+            .relative{
+                img{
+                    max-width: 100%;
+                    width: auto;
+                    max-height: 700px;
+                }
+            }
+        }
+    }  
+}
+@media (max-width: 1024px) { 
+    .home{
+        background-color: $blue;
+        background-image: url('../images/home.png');
+        background-size: cover;
+        height: auto;
+        h1{
+            max-width: 100%;
+        }
+        &__top{
+            height: auto;
+            padding-bottom: 30px;
+            background: none;
+            text-align: center;
+            min-height: inherit;
+            .btn_orange{
+                height: 50px;
+                margin-top: 70px;
+                max-width: 200px;
+            }
+        }
+       
+        &__bottom{
+            position: relative;
+            padding: 0px 0;
+            background: none;
+            .contain{
+                padding: 0;
+            }
+            .relative{
+                position: relative;
+                img{
+                    max-width: 568px;
+                    display:block;
+                    margin: 0 auto;
+                    width: 90%;
+                    height: auto;
+                    position: relative;
+                }
+            }
+            .bg-white{
+                background: $white;
+                padding:15px;
+            }
+        }
+        .order-1{
+            order: 2
+        }
+        .order-2{
+            order: 1
+        }
+    }    
+
+}
+@media (max-width: 768px) { 
+    .home{
+        &__top{
+            h1{
+                text-align: left;
+                padding: 90px 30px 0;
+                margin: 0 auto;
+            }
+            .btn_orange{
+                margin-top: 25px;
+            }
+        }
+    }
+}

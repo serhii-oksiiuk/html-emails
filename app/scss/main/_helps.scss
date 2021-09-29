@@ -1,0 +1,125 @@
+.helps{
+    padding: 100px 0 20px;
+    &__content{
+        .row{
+            align-items: center;
+        }
+        h3, h4{
+            font-family: $Semi;
+            font-size: 36px;
+            line-height: 50px;
+            text-transform: capitalize;
+            color: $blue;
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: $Regular;
+            font-size: 16pt;
+            line-height: 25px;
+            color: $black;
+            margin-bottom: 20px;
+        }
+    }
+    .content_p{
+        margin: 5px 0 35px;
+        p{
+            font-family: $Regular;
+            font-size: 16pt;
+            line-height: 25px;
+            color: $black;
+            margin-bottom: 20px;
+        }
+    }
+    &__img{
+        max-width: 500px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .four__colums{
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    .one__column{
+        flex: 1 0 21%;
+        margin: 0px 8px 30px;
+        position: relative;
+        padding: 80px 30px 45px;
+        border-radius: 30px;
+        p{
+            font-size: 16pt;
+            font-family: $Regular;
+            line-height: 25px;
+        }
+        &__img{
+            position: absolute;
+            top:-10px;
+            left:-10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $white;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            img{
+                width: 25px;
+                height: auto;
+            }
+        }
+    }
+    .one__column:nth-child(even){
+        background: $gray;
+        color: $black;
+    }
+    .one__column:nth-child(odd){
+        background: $orange;
+        color: $white;
+    }
+    .one__column:nth-child(4n){
+        margin-right: 0;
+    }
+    .one__column:first-child,
+    .one__column:nth-child(5n){
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .helps{
+        padding: 50px 0 20px;
+        &__content{
+            h3, h4{
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
+        }
+        .content_p{
+            margin: 0px 0 20px;
+        }
+        .one__column{
+            flex: 1 0 45%;
+            margin: 0px 15px 20px;
+            padding: 80px 15px 30px;
+        }
+    }
+}
+@media (max-width: 475px) {
+    .helps{
+        .one__column{
+            flex: 1 0 100%;
+            margin: 0px 0px 20px;
+            padding: 80px 15px 30px;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+.public{
+    background-color: $gray;
+    background-image: url('../images/home.png');
+    background-size: cover;
+    height: auto;
+    padding-bottom: 70px;
+    .full_list{
+        background: $whitegray;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+        max-width: 1430px;
+        width: 100%;
+        position: relative;
+        top: -140px;
+        margin-bottom: -25px;
+        ul{
+            padding: 25px 30px 5px;
+            -moz-column-count: 4;
+            -moz-column-gap: 20px;
+            -webkit-column-count: 4;
+            -webkit-column-gap: 20px;
+            column-count: 4;
+            column-gap: 20px;
+        }
+        li{
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        span{
+            width: 20px;
+            margin-right: 12px;
+            float:left;
+            img{
+                width: 20px;
+                height: auto;
+                margin-top: 10px;
+            }
+        }
+        p{
+            color: $black;
+            font-family: $Regular;
+            font-size: 16pt;
+            line-height: 32px;
+            display: block;
+            padding-left: 40px;
+        }
+    }
+    .img_and_text{
+        display: flex;
+        align-items: flex-start;
+        img{
+            width: 90px;
+            height: auto;
+            margin-right: 50px;
+        }
+        .content{
+            p{
+                margin-bottom: 20px;
+                font-size: 36px;
+                line-height: 42px;
+                color: $blue;
+                font-family: $Regular;
+            }
+            span{
+                font-family: $Light;
+                color:$black;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .public{
+        padding-bottom: 50px;
+        .full_list{
+            max-width: 100%;
+            width: 100%;
+            position: relative;
+            margin-bottom: -70px;
+            ul{
+                padding: 25px 30px 5px;
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+            li{
+                margin-bottom: 20px;
+            }
+            span{
+                width: 20px;
+                margin-right: 10px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        .col-12{
+            padding: 0;
+        }
+        
+        .img_and_text{
+            .content{
+                p{
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .public{
+        padding-bottom: 30px;
+        .full_list{
+            
+            ul{
+                padding: 20px 15px 5px;
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+            
+            li{
+                display: flex;
+                align-items: center;
+                margin-bottom: 0px;
+            }
+            p{
+                padding-left: 10px;
+            }
+        }
+        .img_and_text{
+            img{
+                margin-right: 30px;
+            }
+            .content{
+                p{
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 475px) {
+    .public{
+        .full_list{
+            ul{
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+            p{
+                padding-left: 0px;
+            }
+        }
+        .img_and_text{
+            img{
+                margin-right: 15px;
+            }
+            .content{
+                p{
+                    font-size: 18px!important;
+                    line-height: 24px!important;
+                }
+            }
+        }
+    }
+}

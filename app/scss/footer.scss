@@ -1,0 +1,32 @@
+footer{
+    text-align: center;
+    padding: 90px 0 110px;
+    background: $blue;
+    *{
+        font-family: $Regular;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: lowercase;
+        color: $white;
+    }
+    .footer__links a{
+        padding: 0 15px;
+    }
+    .footer__links a:hover{
+        color: $lorange;
+        
+    }
+}
+@media (max-width: 1024px) { 
+    footer{
+        padding: 40px 0 55px;
+        *{
+            font-size: 14px;
+        }
+        .footer__links a{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

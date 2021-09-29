@@ -1,0 +1,102 @@
+header{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 70px 0;
+    z-index: 2;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    .logo{
+        height: 18px;
+        width: auto;
+        z-index: 2;
+    }
+    ul{
+        position: relative;
+        display: flex;
+        z-index: 1;
+    }
+    .menu li a{
+        color:$white;
+        padding: 0 0 0 30px;
+    }   
+    .menu li a:hover{
+        color: $orange;
+    }
+    
+    .btn-hamburger{
+        position: relative;
+        width: 30px;
+        display: none;
+        height: 30px;
+        cursor: pointer;
+        span{
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: $white;
+            transform: rotate(0deg);
+            transition: .5s;
+        }
+        span:first-child{
+            top: 2px;
+        }
+        span:nth-child(2){
+            top: 12px;
+        }
+        span:last-child{
+            top:22px
+        }
+    }
+    .btn-hamburger.active{
+        span{
+            transition: .5s;
+        }
+        span:first-child{
+            top:12px;
+            transform: rotate(45deg)
+        }
+        span:nth-child(2){
+            opacity: 0;
+        }
+        span:last-child{
+            top:12px;
+            transform: rotate(-45deg)
+        }
+    }
+}
+@media (max-width: 1700px) {
+    header{
+        padding: 30px 0;
+    }
+}
+@media (max-width: 1024px) { 
+    header{
+        padding: 30px 0;
+        .menu ul{
+            position: fixed;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background: $blue;
+            left: 150%;
+            transition-duration: 1s;
+        }
+        .menu ul.active{
+            left: 0;
+            transition-duration: 1s;
+        }
+        .btn-hamburger{
+            display: block;
+            z-index: 1;
+        }
+    }
+}
